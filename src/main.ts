@@ -1,3 +1,4 @@
+import CKEditor from '@ckeditor/ckeditor5-vue'
 import { createHead } from '@vueuse/head'
 import { createPinia } from 'pinia'
 import { createApp } from 'vue'
@@ -11,5 +12,6 @@ const app = createApp(App)
 app.use(createPinia())
 app.use(router)
 app.use(head)
+app.use(CKEditor)
 
 app.mount('#app')

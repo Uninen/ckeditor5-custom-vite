@@ -3,6 +3,7 @@ import { resolve } from 'path'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
+import CkeditorVitePlugin from './ckeditor-vite-plugin'
 import { version as pkgVersion } from './package.json'
 
 process.env.VITE_APP_VERSION = pkgVersion
@@ -32,10 +33,15 @@ export default defineConfig({
       dirs: ['src/components'],
       extensions: ['vue'],
     }),
+    CkeditorVitePlugin(),
   ],
+  optimizeDeps: {
+    include: ['@ckeditor/ckeditor5-vue'],
+  },
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
     },
   },
+  clearScreen: false,
 })

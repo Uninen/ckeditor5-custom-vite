@@ -4,6 +4,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "types": ["vite/client", "node"]
   },
   "include": [
@@ -11,6 +12,7 @@
     "vite.config.ts",
     "vitest.config.ts",
     "playwright-ct.config.ts",
-    "playwright.config.ts"
+    "playwright.config.ts",
+    "ckeditor-vite-plugin.ts"
   ]
 }
